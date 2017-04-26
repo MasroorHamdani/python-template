@@ -7,7 +7,7 @@ Test cases setup.
 ##Steps to Setup Local Environment.
 
 ###To clone the repository 
-1. git clone git@proddevelopment.git.beanstalkapp.com:/proddevelopment/py-platform-services.git
+1. git clone https://github.com/MasroorHamdani/python-template.git
 
 ###To setup local environment dependencies
 1. Install python3.
@@ -81,13 +81,3 @@ It will generate coverage folder in /out
    gunicorn project.wsgi:application --bind 127.0.0.1:8000 --workers=6 --threads=4 --log-file /var/log/gunicorn.log --log-level error
    or
    gunicorn project.wsgi:application --bind 127.0.0.1:8000
-
-###Run logentries
-1. sh path/to/logentries_install.sh ${LOG_ENTRIES_FLAG} ${LOGENTRIES_LICENSE_KEY} ${APPNAME}
-   example 'sudo ./logentries_install.sh true <Key> Project'
-
-   Required environment variables we need to declare:
-   LOGENTRIES_LICENSE_KEY = <KEY>
-   LOG_ENTRIES_FLAG = <True/False> Depending on environment its value will varry.
-                      Its value will decide whether to intall logentries or not.
-   APPNAME = <Application name e.g., 'Project'>
