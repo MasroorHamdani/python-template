@@ -16,11 +16,10 @@ Including another URLconf
 from django.conf.urls import include
 from django.conf.urls import url
 from django.contrib.staticfiles.urls import staticfiles_urlpatterns
-from project import robots, build_info
+from project import robots
 
 urlpatterns = [
     url(r'^robots.txt', robots.robots_file_content),
-    url(r'^version', build_info.build_file_content),
     url(r'^', include('rest_framework_docs.urls')),
     url(r'^application_1/', include('project.application_1.urls', namespace="application_1")),
 ]
